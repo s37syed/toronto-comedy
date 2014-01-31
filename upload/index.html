@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="http://www2.scs.ryerson.ca/~s37syed/labs/assignments/ass2/style.css"><meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>Assignment Two - Upload a Video</title>
+</head>
+<body>
+	<h1>Upload a Video</h1>
+	<ul>
+		<li><a href="http://www2.scs.ryerson.ca/~s37syed/labs/assignments/ass2">Home</a></li>
+		<li><a href="http://www2.scs.ryerson.ca/~s37syed/labs/assignments/ass2/videos.php">Videos</a></li>
+	</ul>
+	<hr>
+	<div class="hello">
+		<p>To upload a video, browse for a video and click the Upload button below. The maximum upload size for video files is 2 MB</p>
+	</div>
+	
+
+	<form action="http://www2.scs.ryerson.ca/~s37syed/labs/assignments/ass2/upload/upload.php" method="post" enctype="multipart/form-data">
+		<p>Upload Screencap</p>
+		<p><input type="file" name="thumbnail" /><br/>
+
+		<p>Upload Video</p>
+		<p><input type="file" name="video" /><br/>
+
+		<p>Video Description</p>
+		<textarea name="description" cols="25" rows="5" style="font-family: Helvetica">Enter your description here</textarea><br/>
+
+		<input type="submit" name="Upload"value="Upload" />
+	</form>
+	</body>
+</html>
