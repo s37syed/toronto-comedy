@@ -3,11 +3,11 @@ toronto-comedy
 
 An assignment to create a YouTube clone, done in either groups or individually.
 
-#Objective:
+#Objective
 
 The most popular websites to come out these past years have been sites that emphasize user content. The huge popularity of sites like Flicker or Youtube are prime examples. The objective of this assignment is to create an interactive website that generates personalized content for the visitors using CGI/Perl to upload digital videos. The format, purpose and content of the website is up to you but you must have all the required elements.
 
-#Requirements:
+#Requirements
 
 Your site must be HTML5 compliant (Strict or Transitional).
 Your site must use files to store data.
