@@ -1,10 +1,10 @@
 <?php
 
 	//declare local variables for usage
-	$upload_dir_videos = "/home/s37syed/public_html/labs/assignments/ass2/upload/videos/";
-	$upload_dir_img = "/home/s37syed/public_html/labs/assignments/ass2/upload/img/";
-	$upload_dir_info = "/home/s37syed/public_html/labs/assignments/ass2/upload/description/";
-	$upload_desc = "/home/s37syed/public_html/labs/assignments/ass2/upload/description/metadata.txt";
+	$upload_dir_videos = "http://www.shahsyed.com/toronto-comedy/upload/videos/";
+	$upload_dir_img = "http://www.shahsyed.com/toronto-comedy/upload/img/";
+	$upload_dir_info = "http://www.shahsyed.com/toronto-comedy/upload/description/";
+	$upload_desc = "http://www.shahsyed.com/toronto-comedy/upload/description/metadata.txt";
 	$error = false;
 
 	
@@ -16,7 +16,7 @@
 		echo '<!DOCTYPE html>';
 		echo '<html>';
 		echo '<head>';
-		echo '<link rel="stylesheet" type="text/css" href="http://www2.scs.ryerson.ca/~s37syed/labs/assignments/ass2/style.css">';
+		echo '<link rel="stylesheet" type="text/css" href="http://www.shahsyed.com/toronto-comedy/style.css">';
 		echo '<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />';
 	}
 	
@@ -28,7 +28,7 @@
 		if($name == "thumbnail" && !preg_match("/\.(gif|png|jpg|jpeg|bmp|tiff)$/", $file['name']))
 		{
 			htmlHeader();
-			echo '<title>Assignment Two - Error</title></head><body><h1>Error: Image uploaded was invalid.</h1><div class="hello"><p>Please go back and try to upload a valid image file.</p></div></body></html>';
+			echo '<title>Error</title></head><body><h1>Error: Image uploaded was invalid.</h1><div class="hello"><p>Please go back and try to upload a valid image file.</p></div></body></html>';
 			$error = true;
 			break;
 			exit;
@@ -36,7 +36,7 @@
 		if($name == "video" && !preg_match("/\.(mp4|ogg)$/", $file['name']))
 		{
 			htmlHeader();
-			echo '<title>Assignment Two - Error</title></head><body><h1>Error: Video uploaded was invalid.</h1><div class="hello"><p>Please go back and try to upload a valid video file.</p></div></body></html>';
+			echo '<title>Error</title></head><body><h1>Error: Video uploaded was invalid.</h1><div class="hello"><p>Please go back and try to upload a valid video file.</p></div></body></html>';
 			$error = true;
 			break;
 			exit;
@@ -95,13 +95,13 @@
 		file_put_contents($upload_desc, $current);
 		htmlHeader();
 		?>
-		<title>Assignment Two - File uploaded succesfully!</title>
+		<title>Youtube Clone - Toronto Comedy - File uploaded succesfully!</title>
 		</head>
 		<body>
 		<h1>File uploaded succesfully!</h1>
 		<ul>
-			<li><a href="http://www2.scs.ryerson.ca/~s37syed/labs/assignments/ass2/upload">Upload</a></li>
-			<li><a href="http://www2.scs.ryerson.ca/~s37syed/labs/assignments/ass2/videos.php">Videos</a></li>
+			<li><a href="hhttp://www.shahsyed.com/toronto-comedy/upload">Upload</a></li>
+			<li><a href="http://www.shahsyed.com/toronto-comedy/videos.php">Videos</a></li>
 		</ul>
 		<hr>
 		<div class="hello">
@@ -110,13 +110,13 @@
 		<div class="hello"><p>Thanks for uploading your video.</p></div>
 		<div class="hello">
 		<p>Thumbnail:</p>
-		<p><img src="http://www2.scs.ryerson.ca/~s37syed/labs/assignments/ass2/upload/img/<?php echo $video_thumb?>" alt="photo" width="100" height="100"/></p>
+		<p><img src="http://www.shahsyed.com/toronto-comedy/upload/img/<?php echo $video_thumb?>" alt="photo" width="100" height="100"/></p>
 		<p>Description:</p>
 		<p><?php echo $video_info?></p>
 		<p>Video:</p>
 		<video class="center" width="640" height="480" controls>
-		<source src="http://www2.scs.ryerson.ca/~s37syed/labs/assignments/ass2/upload/videos/<?php echo $video_name?>" type="video/mp4">
-		<source src="http://www2.scs.ryerson.ca/~s37syed/labs/assignments/ass2/upload/videos/<?php echo $video_name?>" type="video/ogg">
+		<source src="http://www.shahsyed.com/toronto-comedy/upload/videos/<?php echo $video_name?>" type="video/mp4">
+		<source src="http://www.shahsyed.com/toronto-comedy/upload/videos/<?php echo $video_name?>" type="video/ogg">
 		</video>
 		</div>
 		</body>

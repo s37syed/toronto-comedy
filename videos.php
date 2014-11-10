@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<link rel="stylesheet" type="text/css" href="http://www2.scs.ryerson.ca/~s37syed/labs/assignments/ass1/style.css"><meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-		<script type="text/javascript" src="http://www2.scs.ryerson.ca/~s37syed/labs/assignments/ass1/html5gallery/html5gallery.js"></script>
-		<title>Assignment Two - Latest Videos</title>
+		<link rel="stylesheet" type="text/css" href="http://www.shahsyed.com/toronto-comedy/style.css"><meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<script type="text/javascript" src="http://www.shahsyed.com/toronto-comedy/html5gallery/html5gallery.js"></script>
+		<title>Youtube Clone - Toronto Comedy - Latest Videos</title>
 	</head>
 	<body>
 		<!-- COOKIE CODE HERE -->
@@ -20,8 +20,8 @@
 		?>
 	<h1>Latest Videos</h1>
 	<ul>
-		<li><a href="http://www2.scs.ryerson.ca/~s37syed/labs/assignments/ass2/">Home</a></li>
-        <li><a href="http://www2.scs.ryerson.ca/~s37syed/labs/assignments/ass2/upload/">Upload</a></li>
+		<li><a href="http://www.shahsyed.com/toronto-comedy">Home</a></li>
+        <li><a href="http://www.shahsyed.com/toronto-comedy/upload/">Upload</a></li>
 	</ul>
 	<hr>
 	<div class="hello">
@@ -36,7 +36,7 @@
 				while ( $line = fgets($file) ) 
 				{
 						$metadata = explode("\t", $line);
-						echo "<a href=\"http://www2.scs.ryerson.ca/~s37syed/labs/assignments/ass2/upload/videos/". $metadata[1] . "\"><img src=\"http://www2.scs.ryerson.ca/~s37syed/labs/assignments/ass2/upload/img/". $metadata[0] ."\" alt=\"" . $metadata[2]. "\"></a>";
+						echo "<a href=\"http://www.shahsyed.com/toronto-comedy/upload/videos/". $metadata[1] . "\"><img src=\"http://www.shahsyed.com/toronto-comedy/upload/img/". $metadata[0] ."\" alt=\"" . $metadata[2]. "\"></a>";
 				}
 				fclose($file);
 			?>
